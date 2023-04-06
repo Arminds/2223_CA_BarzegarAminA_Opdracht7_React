@@ -1,13 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Velodashboard from '@/components/Velodashboard.js'
 import {useState} from 'react';
 import useNetwork from '@/data/network'
 
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
@@ -27,20 +24,41 @@ export default function Home() {
         <link rel="icon" href="/cycle-studio-favicon.ico" />
       </Head>
 
+      <header className={styles.header}>
+        <div className={styles.logo}>
+          <Image
+                    src="/logo-velo-app.png"
+                    alt="logo icon"
+                    className={styles.veloIcon}
+                    width={60}
+                    height={60}
+                    priority
+          />
+        </div>
+        <h1 className={styles.title}>Stations</h1>
+        <div className={styles.icon}>
+          <a>
+          <Image
+                    src="/logo-velo-app.png"
+                    alt="logo icon"
+                    className={styles.veloIcon}
+                    width={60}
+                    height={60}
+                    priority
+          />
+          </a>
+        </div>
+      </header>
+
+
       <main>
         <div className={styles.cards}>
           <div className={styles.cards_content}>
             {stations.map(station =>  
               <div key={station.id}>
-
                 <h4>{station.name}</h4>
                 <p>{station.extra.address}</p>
-
                 <div className={styles.box}>
-                  <image
-                    src="/veloIcon.png"
-                    alt="gele fiets icoon"
-                  />
                   <Image
                     src="/veloIcon.png"
                     alt="gele fiets icoon"
@@ -58,14 +76,11 @@ export default function Home() {
                     height={20}
                     priority
                   />
-                  <p>hier komt de afstand tot deze station</p>
+                  <p>999m</p>
                 </div>
-
                 <h1>----------------------------------</h1>
               </div>
             )}
-       
-
           </div>
         </div>
       </main>
