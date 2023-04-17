@@ -1,24 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 .cards{
-  background-color: rgb(245, 245, 245);
   padding: 56px 16px 16px 16px;
-  width: 400px;
 }
 
 .cards_content h4{
-  z-index: 2;
-  position: relative;
   margin: 12px 0 4px 0;
-  font-family: inherit;
   font-weight: 600;
   font-size: 14px;
   line-height: 2;
 }
 
 .cards_content p {
-  z-index: 2;
-  position: relative;
   margin: 0;
   font-size: 14px;
   line-height: 1.7;
@@ -32,23 +25,33 @@
 .cards_content{
   align-items: center;
   display: flex;
-  flex-direction: column;
   gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: gray;
+  flex: 1;
+  flex-basis: 100%;
 }
 
 .cards_content img{
   margin-left: 20px;
 }
 
-/* 
-.cards_content p{
-  background-color: rgb(36, 36, 36);
-  border-radius: 20px;
-  width: 330px;
-  height: 215px;
-  padding: 130px 0px 0px 20px;
+@media screen and (min-width: 480px) {
+  .card {
+    flex-basis: 40%;
+    margin: 5px;
+  }
 }
-*/
+
+@media screen and (min-width: 490px) {
+  .card {
+    flex-basis: 31%;
+    margin: 5px;
+  }
+}
 
 .header {
   display: flex;
