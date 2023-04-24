@@ -26,7 +26,7 @@ function velostation(props) {
                     height={20}
                     priority
                   />
-                  <p>999m</p>
+                  <p>{props.station.distance * 1000}m</p>
                 </div>
               </div>
 
