@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from '@/styles/Home.module.css'
 import Image from 'next/image'
+// import StationImage from '@/components/StationImage.js'
+
 
 function velostation(props) {
     return (
@@ -13,20 +15,22 @@ function velostation(props) {
                     src="/veloIcon.png"
                     alt="gele fiets icoon"
                     className={styles.veloIcon}
-                    width={40}
-                    height={24}
+                    width={34}
+                    height={17}
                     priority
                   />
-                  <p>{props.station.free_bikes}</p>
+                  <div  className="bikesEnAfstand">
+                    <h6>{props.station.free_bikes}</h6>
+                  </div>
                   <Image
                     src="/pinIcon.png"
                     alt="gele pin icoon"
                     className={styles.veloIcon}
-                    width={10}
-                    height={20}
+                    width={8}
+                    height={16}
                     priority
                   />
-                  <p>{props.station.distance * 1000}m</p>
+                    <h6>{props.station.distance * 1000}m</h6>
                 </div>
               </div>
 

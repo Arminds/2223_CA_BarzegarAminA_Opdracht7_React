@@ -1,20 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
 .cards{
   padding: 56px 16px 16px 16px;
 }
 
 .cards_content h4{
-  margin: 12px 0 4px 0;
-  font-weight: 600;
-  font-size: 14px;
+  margin: 12px 0 -10px 0;
+  font-size: 16px;
   line-height: 2;
+  margin-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
 .cards_content p {
   margin: 0;
   font-size: 14px;
   line-height: 1.7;
+  margin-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.cards_content h6 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-left: -10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 }
 
 .box{
@@ -30,13 +45,17 @@
 }
 
 .card {
-  background-color: gray;
+  border: solid black 1px;
   flex: 1;
   flex-basis: 100%;
+  border-radius: 20px;
+  padding-top: 90px;
+  padding-bottom: 20px; 
 }
 
 .cards_content img{
   margin-left: 20px;
+  padding-top: 2px;
 }
 
 @media screen and (min-width: 480px) {
