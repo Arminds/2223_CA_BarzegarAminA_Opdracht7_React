@@ -98,7 +98,7 @@ export default function Home() {
       <main>
         <div className={styles.cards}>
           <div className={styles.cards_content}>
-            {stations.map(station =>  
+            {stations.map(station => 
               <Velostation station={station} key={station.id}/>
             )}
           </div>
@@ -107,3 +107,5 @@ export default function Home() {
     </>
   )
 }
+//Link href={`/stations/${station.id}`}
+// <Link href={`/stations/${station.id}`} key={station.id}>{station.name</Link>
