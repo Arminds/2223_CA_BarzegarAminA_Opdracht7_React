@@ -3,12 +3,16 @@ import styles from '@/styles/Home.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
 
-// import StationImage from '@/components/StationImage.js'
+import StationImage from '@/components/StationImage.js'
+
 
 function velostation(props) {
     return (
-      <Link style={{textDecoration: 'none'}} href={`/stations/${props.station.id}`}className={styles.card}>     
-        <h4>{props.station.name}</h4>
+      <Link style={{textDecoration: 'none'}} href={`/stations/${props.station.id}`}className={styles.card}>    
+       <StationImage  station={props.station}/>
+       <div className={styles.gradient}></div>
+       <div className={styles.float}>
+       <h4>{props.station.name}</h4>
         <p>{props.station.extra.address}</p>
         <div className={styles.box}>
           <Image
@@ -32,8 +36,10 @@ function velostation(props) {
           />
           <h6>{props.station.distance * 1000}m</h6>
         </div>
+        
+        </div>
       </Link>
     );
   }
   
-  export default velostation;
+export default velostation;

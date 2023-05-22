@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
+
 import Velodashboard from '@/components/Velodashboard.js'
 import Velostation from '@/components/velostation.js'
 import {useState, useEffect} from 'react';
@@ -97,8 +98,9 @@ export default function Home() {
 
       <main>
         <div className={styles.cards}>
+        <input className={styles.zoekbalk} type="text" value={filter} onChange={handleFilterChange} placeholder="zoek een station of adres..."/>
           <div className={styles.cards_content}>
-            {stations.map(station => 
+            {stations/*.slice(0,9)*/.map(station =>  //slice: voor een limiet
               <Velostation station={station} key={station.id}/>
             )}
           </div>

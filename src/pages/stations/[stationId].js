@@ -4,13 +4,10 @@ import styles from '@/styles/Home.module.css'
 import Velostation from '@/components/velostation.js'
 import useNetwork from '@/data/network'
 import { useRouter } from 'next/router'
-
-
-
+import Link from 'next/link'
 
 
 export default function Home() {
-
     const { network, isLoading, isError } = useNetwork()
     const router = useRouter()
     
@@ -21,16 +18,18 @@ export default function Home() {
 
     return (
       <>
+      <header className={styles.header}>
+          <h1 className={styles.titleB}>{station.name}</h1>
+      </header>
+
       <main>
         <div className={styles.cards}>
-            <div className={styles.cards_content}></div>
         <h4>{station.name}</h4>
         <p>{station.extra.address}</p>
         <div className={styles.box}>
           <Image
             src="/veloIcon.png"
             alt="gele fiets icoon"
-            className={styles.veloIcon}
             width={34}
             height={17}
             priority
@@ -41,7 +40,6 @@ export default function Home() {
           <Image
             src="/pinIcon.png"
             alt="gele pin icoon"
-            className={styles.veloIcon}
             width={8}
             height={16}
             priority
@@ -51,16 +49,11 @@ export default function Home() {
         </div>
 
         </main>
+        <footer>
+          <div className={styles.footBox}>
+            <Link style={{textDecoration: 'none'}} href="/" className={styles.foot}>back</Link>
+          </div>
+        </footer>
       </>
     )
   }
-
-  /*  <main>
-          <div className={styles.cards}>
-            <div className={styles.cards_content}>
-              {stations.map(station => 
-                <Velostation station={station} key={station.id}/>
-              )}
-            </div>
-        </div>
-      </main> */

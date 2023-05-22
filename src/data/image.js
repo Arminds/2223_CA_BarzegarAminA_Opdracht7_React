@@ -1,4 +1,4 @@
-/* import fetcher from './_fetcher'
+import fetcher from './_fetcher'
 import useSWR from 'swr'
 
 export default function useImage (station) {
@@ -9,4 +9,4 @@ export default function useImage (station) {
     isLoading,
     isError: error
   }
-}*/
+}
