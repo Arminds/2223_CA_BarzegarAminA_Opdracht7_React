@@ -83,11 +83,11 @@ export default function Home() {
         <div className={styles.icon}>
           <a>
           <Image
-                    src="/logo-velo-app.png"
+                    src="/inbox-icon.png"
                     alt="logo icon"
-                    className={styles.veloIcon}
-                    width={60}
-                    height={60}
+                    className={styles.inboxIcon}
+                    width={30}
+                    height={20}
                     priority
           />
           </a>

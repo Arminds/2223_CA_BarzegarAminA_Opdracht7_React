@@ -24,8 +24,8 @@ export default function Home() {
 
       <main>
         <div className={styles.cards}>
-        <h4>{station.name}</h4>
-        <p>{station.extra.address}</p>
+        <h4 className={styles.haavier}>{station.name}</h4>
+        <p className={styles.pee}>{station.extra.address}</p>
         <div className={styles.box}>
           <Image
             src="/veloIcon.png"
@@ -35,7 +35,7 @@ export default function Home() {
             priority
           />
           <div  className="bikesEnAfstand">
-            <h6>{station.free_bikes}</h6>
+            <h6 className={styles.haazes}>{station.free_bikes}</h6>
           </div>
           <Image
             src="/pinIcon.png"
@@ -44,7 +44,7 @@ export default function Home() {
             height={16}
             priority
           />
-          <h6>{station.distance * 1000}m</h6>
+          <h6 className={styles.haazes}>{station.distance * 1000}m</h6>
         </div>
         </div>
 

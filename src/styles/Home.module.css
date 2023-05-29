@@ -4,6 +4,10 @@
   padding: 56px 16px 16px 16px;
 }
 
+.inboxIcon{
+  margin: 15px;
+}
+
 .foto{
   border-radius: 20px;
   display: block;
@@ -28,11 +32,43 @@
   border-radius: 20px;
   padding:10px;
   outline: none;
-  width: 200px;
+  width: 300px;
   
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: -50px;
 }
 
 
+.haavier{
+  margin: 12px 0 -10px 0;
+  font-size: 16px;
+  line-height: 2;
+  margin-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.pee{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.haazes{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-left: -10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
 
 
 .cards_content h4{
